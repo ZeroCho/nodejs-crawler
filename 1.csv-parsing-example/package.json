@@ -1,0 +1,14 @@
+{
+  "name": "csv-parsing-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^4.3.1"
+  }
+}

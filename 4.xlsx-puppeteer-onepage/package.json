@@ -1,0 +1,15 @@
+{
+  "name": "xlsx-puppeteer-multipage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.12.2",
+    "xlsx": "^0.14.1"
+  }
+}

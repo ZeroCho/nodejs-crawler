@@ -9,8 +9,7 @@ const records = xlsx.utils.sheet_to_json(ws);
 const crawler = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  add_to_sheet(ws, 'C1');
-  ws['C1'] = { t: 's', v: '평점' };
+  add_to_sheet(ws, 'C1', 's', '평점');
   for (const [i, r] of records.entries()) {
     await page.goto(r.링크);
     const text = await page.evaluate(() => {
@@ -20,15 +19,12 @@ const crawler = async () => {
     if (text) {
       const newCell = 'C' + (i + 2);
       console.log(r.제목, '평점', text.trim(), newCell);
-      add_to_sheet(ws, newCell);
-      ws[newCell] = { t: 'n', v: text.trim() };
+      add_to_sheet(ws, newCell, 'n', text.trim());
     }
     await page.waitFor(1000);
   }
   await page.close();
   await browser.close();
-  console.log(workbook);
-  console.log(ws['!ref'], ws['!col']);
   xlsx.writeFile(workbook, 'xlsx/result.xlsx');
 };
 crawler();

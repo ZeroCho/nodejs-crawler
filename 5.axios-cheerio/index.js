@@ -16,6 +16,7 @@ const crawler = async () => {
       const $ = cheerio.load(html);
       const text = $('.score.score_left .star_score').text();
       console.log(r.제목, '평점', text.trim());
+      const newCell = 'C' + (i + 2);
       add_to_sheet(ws, newCell, 'n', text.trim());
     }
   }));

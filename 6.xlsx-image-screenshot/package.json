@@ -1,5 +1,5 @@
 {
-  "name": "csv-parsing-example",
+  "name": "xlsx-image-screenshot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,8 @@
   "author": "ZeroCho",
   "license": "MIT",
   "dependencies": {
-    "csv-parse": "^4.3.1",
-    "puppeteer": "^1.12.2"
+    "axios": "^0.18.0",
+    "puppeteer": "^1.12.2",
+    "xlsx": "^0.14.1"
   }
 }

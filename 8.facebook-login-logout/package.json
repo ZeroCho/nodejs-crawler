@@ -1,0 +1,15 @@
+{
+  "name": "facebook-login-logout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "puppeteer": "^1.12.2"
+  }
+}

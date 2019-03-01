@@ -1,0 +1,16 @@
+{
+  "name": "proxy-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^1.6.5",
+    "puppeteer": "^1.12.2",
+    "sequelize": "^4.42.1"
+  }
+}

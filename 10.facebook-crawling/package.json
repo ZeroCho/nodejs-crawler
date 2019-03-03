@@ -1,0 +1,16 @@
+{
+  "name": "facebook-crawling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^1.6.5",
+    "puppeteer": "^1.12.2",
+    "sequelize": "^4.43.0"
+  }
+}

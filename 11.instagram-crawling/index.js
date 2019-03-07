@@ -10,7 +10,7 @@ const crawler = async () => {
     const browser = await puppeteer.launch({
       headless: false,
       args: ['--window-size=1920,1080', '--disable-notifications'],
-      userDataDir: 'C:\Users\zerocho\AppData\Local\Google\Chrome\User Data'
+      // userDataDir: 'C:\Users\zerocho\AppData\Local\Google\Chrome\User Data'
     });
     const page = await browser.newPage();
     await page.setViewport({
@@ -18,18 +18,26 @@ const crawler = async () => {
       height: 1080,
     });
     await page.goto('https://instagram.com');
-    // await page.waitFor(1000);
-    await page.waitForSelector('button.L3NKy');
-    await page.click('button.L3NKy');
-    await page.waitForNavigation();
-    await page.waitForSelector('#email');
-    await page.type('#email', process.env.EMAIL);
-    await page.type('#pass', process.env.PASSWORD);
-    // await page.waitForResponse((response) => {
-    //   return response.url().includes('login_attempt');
-    // });
-    // await page.keyboard.press('Escape');
-    //
+    await page.waitFor(1000);
+    if (await page.$('a[href="/zerohch0/"]')) {
+      console.log('already logged in');
+    } else {
+      await page.waitForSelector('button.L3NKy');
+      await page.click('button.L3NKy');
+      await page.waitForNavigation();
+      await page.waitForSelector('#email');
+      await page.type('#email', process.env.EMAIL);
+      await page.type('#pass', process.env.PASSWORD);
+      await page.waitForSelector('#loginbutton');
+      await page.click('#loginbutton');
+      await page.waitForNavigation();
+      console.log('login complete');
+    }
+
+    // $('.coreSpriteHeartOpen span').click()
+    // $('article h2').textContent
+    // $('.c-Yi7').href
+
     // let result = [];
     // while (result.length < 10) {
     //   await page.waitForSelector('[id^=hyperfeed_story_id]:first-child');

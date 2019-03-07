@@ -1,0 +1,17 @@
+{
+  "name": "instagram-crawling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "ZeroCho",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "mysql2": "^1.6.5",
+    "puppeteer": "^1.13.0",
+    "sequelize": "^4.43.0"
+  }
+}

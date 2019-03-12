@@ -45,8 +45,17 @@ const crawler = async () => {
         const name = article.querySelector('h2') && article.querySelector('h2').textContent;
         const img = article.querySelector('.KL4Bh img') && article.querySelector('.KL4Bh img').src;
         const content = article.querySelector('.C4VMK > span') && article.querySelector('.C4VMK > span').textContent;
+        const commentTags = article.querySelectorAll('ul li:not(:first-child)');
+        let comments = [];
+        commentTags.forEach((c) => {
+          const name = c.querySelector('.C4VMK h3') && c.querySelector('.C4VMK h3').textContent;
+          const comment = c.querySelector('.C4VMK > span') && c.querySelector('.C4VMK > span').textContent;
+          comments.push({
+            name, comment,
+          });
+        });
         return {
-          postId, name, img, content,
+          postId, name, img, content, comments,
         }
       });
       if (newPost.postId !== prevPostId) {

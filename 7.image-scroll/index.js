@@ -10,7 +10,7 @@ const crawler = async () => {
       const srcs = await page.evaluate(() => {
         window.scrollTo(0, 0);
         let imgs = [];
-        const imgEls = document.querySelectorAll('._1pn7R'); // 사이트 바뀌었을 때 클래스 적절히 바꾸기
+        const imgEls = document.querySelectorAll('figure'); // 사이트 바뀌었을 때 클래스 적절히 바꾸기
         if (imgEls.length) {
           imgEls.forEach((v) => {
             let src = v.querySelector('img._2zEKz').src;
@@ -27,7 +27,7 @@ const crawler = async () => {
         return imgs;
       });
       result = result.concat(srcs);
-      await page.waitForSelector('._1pn7R');
+      await page.waitForSelector('figure');
     }
     console.log(result);
     await page.close();

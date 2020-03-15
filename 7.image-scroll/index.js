@@ -10,12 +10,12 @@ const crawler = async () => {
       const srcs = await page.evaluate(() => {
         window.scrollTo(0, 0);
         let imgs = [];
-        const imgEls = document.querySelectorAll('figure'); // 사이트 바뀌었을 때 클래스 적절히 바꾸기
+        const imgEls = document.querySelectorAll('.nDTlD'); // 사이트 바뀌었을 때 클래스 적절히 바꾸기
         if (imgEls.length) {
           imgEls.forEach((v) => {
-            let src = v.querySelector('img._2zEKz').src;
-            if (src) {
-              imgs.push(src);
+            let img = v.querySelector('img._2zEKz'); // 사이트 바뀌었을 때 클래스 적절히 바꾸기
+            if (img && img.src) {
+              imgs.push(img.src);
             }
             v.parentElement.removeChild(v);
           });

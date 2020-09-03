@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "mysql2": "^1.6.5",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.13.0",
     "sequelize": "^4.42.1"
   }
 }

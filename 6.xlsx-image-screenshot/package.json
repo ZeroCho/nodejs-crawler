@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "puppeteer": "^1.12.2",
+    "puppeteer": "^1.13.0",
     "xlsx": "^0.14.1"
   }
 }

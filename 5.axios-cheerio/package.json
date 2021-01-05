@@ -9,7 +9,7 @@
   "author": "ZeroCho",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.2",
     "xlsx": "^0.14.1"
   }

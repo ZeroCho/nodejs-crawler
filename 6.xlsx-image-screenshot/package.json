@@ -9,7 +9,7 @@
   "author": "ZeroCho",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "puppeteer": "^1.13.0",
     "xlsx": "^0.14.1"
   }

@@ -9,6 +9,6 @@
   "author": "ZeroCho",
   "license": "MIT",
   "dependencies": {
-    "xlsx": "^0.14.1"
+    "xlsx": "^0.17.0"
   }
 }
